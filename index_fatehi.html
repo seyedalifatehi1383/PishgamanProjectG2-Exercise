@@ -1,0 +1,115 @@
+<!-- this tag shows that this file is an HTML file -->
+<!DOCTYPE html>
+<!-- the standard of the sites is that we code in html tag -->
+<html>
+    <!-- this tag includes informations of the webpage -->
+    <head>
+        <!-- utf-8 makes browser support Farsi language and approximately all of the charactars -->
+        <meta chrset="UTF-8">
+        <!-- this tag is for linking css file to this html file -->
+        <link rel="stylesheet" type="text/css" href="style_fatehi.css">
+        <!-- shows the title of webpage at the title bar of it -->
+        <title> fatehi exercise </title>
+        <!-- this tag is for the responsibility of the webpage in different screen sizes -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <!-- we code things that we want to show in our site in body tag -->
+    <body>
+        <!-- i used unordered list to create the horizontal menu -->
+        <ul class="navbar">
+            <!-- li (stands for lists) tag includes options of the ul tag -->
+            <!-- a tag is for linking -->
+            <li> <a class="activePage" href="#home"> HOME </a> </li>
+            <li> <a href="#option1"> OPTION1 </a> </li>
+            <li> <a href="#option2"> OPTION2 </a> </li>
+            <li style="float: right"> <a href="#about"> ABOUT </a> </li>
+        </ul>
+        
+        <!-- p tag is for making a paragraph -->
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            
+            <br /> <!-- this tag is for breaking a paragraph -->
+            
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+            <br />            
+            
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+            <br />
+            
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+        
+        <!-- form tag is for making a form -->
+        <form align="center">
+            <!-- this tag is for capsulationing form tag -->
+            <fieldset>
+                <!-- the title of capsule of form tag is written in legend tag -->
+                <!-- strong tag is for bolding tag -->
+                <legend align="center" style="font-size: 22px"> <strong> PISHGAMAN FORM </strong> </legend>
+                
+                <!-- label of an input and etc is written in this tag -->
+                <!-- type is text because text should be written in this -->
+                <!-- for and id should be same because if they be same if you click on the label the input is selected -->
+                <!-- it is required means that user must enter this option -->
+                <!-- name attribute : if you submit your form shows that what you entered in front of what you enter in name attribute -->
+                <label for="first name"> First Name : </label> <input type="text" id="first name" name="first name" required>
+                
+                <br /><br /> <!-- these br tags are for seperating the parts of the form -->
+                
+                <label for="last name"> Last Name : </label> <input type="text" id="last name" name="last name" required>
+                
+                <br /><br />
+                
+                <!-- div (stands for divide) tag is the tag that is used for dividing different parts of the  -->
+                <!-- textarea is for some explanations that might be long. the size if the box of this tag is changable by default -->
+                <label for="about"> Tell us a little about yourself : </label> <textarea id="about" name="about" required></textarea>
+                
+                <br /><br />
+                
+                <!-- span is a tag like p but its display is inline -->
+                <span> Do you exercise at home? </span>
+                <!-- input type radio : this type is usually used for selecting on option from multiple options -->
+                <label for="yes exs">Yes</label> <input type="radio" name="exercise" id="yes exs" value="yes exercise" required>
+                <label for="no exs">No</label> <input type="radio" name="exercise" id="no exs" value="no exercise" required>
+                
+                <br />
+                
+                <p> What is your favorite section of programming? </p>
+                <!-- input type checkbox : this type is usually used for checking multiple choises and checking thewanted option -->
+                <label for="security"> Security </label> <input type="checkbox" name="securitySection" id="security">
+                <label for="webDeveloper"> Web developer </label> <input type="checkbox" name="webDevSection" id="webDeveloper">
+                <label for="ai"> AI </label> <input type="checkbox" name="AISection" id="ai">
+                
+                <br />
+                
+                <p> How do you like to read about your favorite topics? </p>
+                <label for="book"> Books </label> <input type="checkbox" name="books" id="book">
+                <label for="resrc"> Online Resources </label> <input type="checkbox" name="online resrc" id="resrc">
+                <label for="apps"> Phone Apps </label> <input type="checkbox" name="phone app" id="apps">
+                <label for="magazine"> Magazines </label> <input type="checkbox" name="magazine" id="magazine">
+                
+                <br /><br />
+                
+                <!-- select option are groups of tags that are usually used for choising one item from many options -->
+                <span> Which language of programming do you like? </span>
+                <select name="programming language">
+                    <option selected> Choose one </option>
+                    <option value="c++"> C++ </option>
+                    <option value="java"> Java </option>
+                    <option value="python">  Python </option>
+                    <option value="javascript"> Javascript </option>
+                    <option value="php"> PHP </option>
+                </select>
+                
+                <br /><br />
+                
+                <!-- input type submit is for submitting the entered infos -->
+                <input type="submit" value="Submit Form">
+            </fieldset>
+        </form>
+    </body>
+</html>

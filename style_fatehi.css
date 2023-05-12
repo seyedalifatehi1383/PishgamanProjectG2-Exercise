@@ -1,5 +1,5 @@
 /*
-
+    margin is zero because of that 
 */
 body {
     margin: 0;
@@ -20,13 +20,16 @@ ul.navbar {
 }
 
 /*
-dispaly
+    float left is for ordering options from left
 */
 ul.navbar li {
-    display: inline;
     float: left;
 }
 
+
+/*
+    this part configures the text color, cancellng text decoration, display, and padding of each option of the nav bar
+*/
 ul.navbar li a {
     display: block;
     color: black;
@@ -35,6 +38,16 @@ ul.navbar li a {
     text-decoration: none;
 }
 
+/*
+    when the cursor hovers on one of the options of nav bar, the color becomes dark green
+*/
 ul.navbar li a:hover {
     background-color: #49693a;
+}
+
+/*
+    this part is for aligning the label of the textarea on top of the box
+*/
+textarea#about {
+    vertical-align: top;
 }
