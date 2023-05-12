@@ -1,0 +1,40 @@
+/*
+
+*/
+body {
+    margin: 0;
+}
+
+/*
+    this part is for setting the place and color of the navigation bar
+*/
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7cd653;
+    top: 0;
+    width: 100%;
+    display: block;
+}
+
+/*
+dispaly
+*/
+ul.navbar li {
+    display: inline;
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #49693a;
+}
