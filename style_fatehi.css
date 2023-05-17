@@ -1,5 +1,5 @@
 /*
-    margin is zero because of that 
+    margin is zero because of that navbar sticks just on the top of th website
 */
 body {
     margin: 0;
@@ -16,14 +16,24 @@ ul.navbar {
     background-color: #7cd653;
     top: 0;
     width: 100%;
-    display: block;
+    display: inline-block;
+    position: fixed;
 }
 
 /*
     float left is for ordering options from left
+    inline display is for showing links in on line
 */
 ul.navbar li {
+    display: inline;
     float: left;
+}
+
+/*
+    this part is for about option of the navbar
+*/
+ul.navbar li.about {
+    float: right;
 }
 
 
@@ -42,7 +52,17 @@ ul.navbar li a {
     when the cursor hovers on one of the options of nav bar, the color becomes dark green
 */
 ul.navbar li a:hover {
-    background-color: #49693a;
+    background-color: lightblue;
+}
+
+ul.navbar li a.activePage {
+    background-color: dimgrey;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+  ul.navbar li.about, 
+  ul.navbar li {float: none;}
 }
 
 /*
@@ -50,4 +70,12 @@ ul.navbar li a:hover {
 */
 textarea#about {
     vertical-align: top;
+}
+
+/*
+    this part is for centering and decrease the width of form
+*/
+fieldset.pishgamanFormFieldset {
+    display: inline-block;
+    min-width: auto;
 }

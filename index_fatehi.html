@@ -8,10 +8,14 @@
         <meta chrset="UTF-8">
         <!-- this tag is for linking css file to this html file -->
         <link rel="stylesheet" type="text/css" href="style_fatehi.css">
+        <!-- this tag is for introdusing the author iif the code to the browser search engine robots -->
+        <meta name="author" content="Seyed Ali Fatehi">
         <!-- shows the title of webpage at the title bar of it -->
         <title> fatehi exercise </title>
-        <!-- this tag is for the responsibility of the webpage in different screen sizes -->
+        <!-- this tag is for the responsibility of the webpage in different screen sizes specially in mobile phones -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- this tag is for having a favicon for our website -->
+        <link rel="shortcut icon" href="favicon.ico">
     </head>
     
     <!-- we code things that we want to show in our site in body tag -->
@@ -21,9 +25,9 @@
             <!-- li (stands for lists) tag includes options of the ul tag -->
             <!-- a tag is for linking -->
             <li> <a class="activePage" href="#home"> HOME </a> </li>
-            <li> <a href="#option1"> OPTION1 </a> </li>
-            <li> <a href="#option2"> OPTION2 </a> </li>
-            <li style="float: right"> <a href="#about"> ABOUT </a> </li>
+            <li> <a href="#option1"> OPTION 1 </a> </li>
+            <li> <a href="#option2"> OPTION 2 </a> </li>
+            <li class="about"> <a href="#about"> ABOUT </a> </li>
         </ul>
         
         <!-- p tag is for making a paragraph -->
@@ -46,7 +50,7 @@
         <!-- form tag is for making a form -->
         <form align="center">
             <!-- this tag is for capsulationing form tag -->
-            <fieldset>
+            <fieldset class="pishgamanFormFieldset">
                 <!-- the title of capsule of form tag is written in legend tag -->
                 <!-- strong tag is for bolding tag -->
                 <legend align="center" style="font-size: 22px"> <strong> PISHGAMAN FORM </strong> </legend>
@@ -94,7 +98,7 @@
                 
                 <br /><br />
                 
-                <!-- select option are groups of tags that are usually used for choising one item from many options -->
+                <!-- select option are groups of tags that are usually used for choosing one item from many options -->
                 <span> Which language of programming do you like? </span>
                 <select name="programming language">
                     <option selected> Choose one </option>
@@ -111,5 +115,7 @@
                 <input type="submit" value="Submit Form">
             </fieldset>
         </form>
+        
+        
     </body>
 </html>
