@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue 3</title>
+    <style>
+        .box{
+            background-color: blueviolet;
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: rgb(43, 226, 217);
+            width: 200px;
+            height: 200px;
+        }
+        .box2{
+            background-color: rgb(226, 43, 119);
+            width: 200px;
+            height: 200px;
+        }
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div  id="app" v-cloak>
+        {{greeting}}
+        <input @keyup.enter="greet(greeting+'!!!!!')"  v-model="greeting"/>
+        <hr>
+        <button v-on:click="isvisible=!isvisible">show box</button>
+        <!-- @click=v-on:click -->
+        <button @click="taglebox">show box</button>
+        <div v-if="isvisible" class="box"></div>
+        <!-- <div v-else-if="isvisible1" class="box1"></div> -->
+        <!-- <div v-else class="box2"></div> -->
+        <!-- v-show is lik v-if -->
+       </div>
+
+
+   <script src="https://unpkg.com/vue@next"></script>
+
+   <script>
+    let app=Vue.createApp({
+        data:function(){
+            return{
+                greeting:'hi vue js!',
+                isvisible:false,
+                // isvisible1:false
+            }
+        },
+        methods:{
+            taglebox(){
+                this.isvisible=!this.isvisible
+            },
+            greet(greeting){
+                console.log(greeting)
+            }
+        }
+
+    })
+    app.mount('#app')
+   </script>
+
+</body>
+</html>
