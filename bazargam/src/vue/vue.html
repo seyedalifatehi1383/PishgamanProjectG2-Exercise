@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-if="show"><p>{{title}}-{{author}}-{{age}} </p></div>
+        
+        <button @click="age++">++</button>
+        <button @click="dec">--</button>
+        <div @click="changeTitle('foot')">title</div>
+        <button @click="hide"> 
+            <Span v-if="show">hide</Span>
+            <span v-else>show</span>
+        </button>
+
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
