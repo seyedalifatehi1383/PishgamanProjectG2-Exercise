@@ -63,3 +63,13 @@ console.log(person);
 // Dot Notation
 person.name = 'Ali';
 console.log(person.name);
+
+// Bracket Notation
+// the target should be declared between quotes
+person['name'] = 'Seyed Ali';
+console.log(person['name']);
+
+// dot note is easier but bracket note is useful when we dont know that which property will the user selects we can code like below:
+let selection = 'name';
+person[selection] = 'Fatehi';
+console.log(person[selection]);
