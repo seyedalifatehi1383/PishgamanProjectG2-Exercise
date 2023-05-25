@@ -34,3 +34,32 @@ let age = 18; //Number Literal
 let isApproved = true; //Boolean Literal. the value is 'true' or 'false'
 let undef = undefined; //by default the vars are undefined
 let selectedColor = null; //i.e. a user didnt select any colors, we put the value null
+
+// we use typeof statement to show the type of the variable
+// the below example shows that JS is dynamic that means we can change the type of the variable after defining it
+let ex = "ttt";
+console.log(typeof ex);
+
+ex = 2;
+console.log(typeof ex);
+
+// it shows that in JS we dont have two kinds of numbers
+ex = 2.1;
+console.log(typeof ex);
+
+// this is the syntax for defining an object
+// instead of the codes below:
+// let age = 18;
+// let name = 'ali';
+// we call this an Object Literal
+let person = {
+    name: 'Mosh',
+    age: 30
+};
+
+console.log(person);
+
+// changing and reading  the properties:
+// Dot Notation
+person.name = 'Ali';
+console.log(person.name);

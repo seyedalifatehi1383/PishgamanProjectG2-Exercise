@@ -20,6 +20,11 @@ ul.navbar {
     position: fixed;
 }
 
+div.container {
+    position: relative;
+    margin-top: 60px;
+}
+
 /*
     float left is for ordering options from left
     inline display is for showing links in on line
@@ -63,6 +68,8 @@ ul.navbar li a.activePage {
 @media screen and (max-width: 600px) {
   ul.navbar li.about, 
   ul.navbar li {float: none;}
+  div.container {margin-top: 200px;}
+
 }
 
 /*
