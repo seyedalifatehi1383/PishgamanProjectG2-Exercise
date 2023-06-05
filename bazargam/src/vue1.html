@@ -28,15 +28,16 @@
         {{greeting}}
         <input @keyup.enter="greet(greeting+'!!!!!')"  v-model="greeting"/>
         <hr>
-        <button v-on:click="isvisible=!isvisible">show box</button>
+        <button v-on:click.prevent.stop="isvisible=!isvisible">show box</button>
         <!-- @click=v-on:click -->
-        <button @click="taglebox">show box</button>
+        <button @click.right="taglebox">taglebox</button>
         <div v-if="isvisible" class="box"></div>
         <!-- <div v-else-if="isvisible1" class="box1"></div> -->
         <!-- <div v-else class="box2"></div> -->
         <!-- v-show is lik v-if -->
        </div>
-
+       
+       
 
    <script src="https://unpkg.com/vue@next"></script>
 
@@ -55,7 +56,8 @@
             },
             greet(greeting){
                 console.log(greeting)
-            }
+            },
+
         }
 
     })
