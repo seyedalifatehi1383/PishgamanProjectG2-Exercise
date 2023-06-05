@@ -3,10 +3,54 @@
 <head>
     <title>Document</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .box{
+            padding: 100px 0;
+            width:600px;
+            text-align: center; 
+            background: darkgoldenrod;
+            margin: 20px;
+            display:inline-block;
+        }
+        body{
+            background: #eee;
+            max-width: 960px;
+            margin: 20px  auto;
+        }
+        p h3 ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .fav{
+            background-color: blue;
+        }
+
+            </style>
 </head>
 <body>
     <div id="app">
-        <div v-if="show"><p>{{title}}-{{author}}-{{age}} </p></div>
+        <a v-bind:href="url">google</a>
+        <!-- :href -->
+        <div v-if="show"><p>{{title}}-{{author}}-{{age}} </p>
+            <ul v-for="book in books" >
+                <li  :class="{fav:book.isfav }" @click:"cang(book)">
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+                    <img :src="book.Image" :alt="book.title">
+
+                </li>
+            </ul>
+        </div>
         
         <button @click="age++">++</button>
         <button @click="dec">--</button>
@@ -15,6 +59,15 @@
             <Span v-if="show">hide</Span>
             <span v-else>show</span>
         </button>
+        <div v-show="show">showing....</div>
+        <br>
+        <hr>
+        <br> 
+        <div class="box" @mouseover="handleEvent">mouseover</div>
+        <div class="box" @mouseleave="handleEvent">mouse leave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">{{x}},{{y}}</div>
+
 
     </div>
     <script src="vue.js"></script>
