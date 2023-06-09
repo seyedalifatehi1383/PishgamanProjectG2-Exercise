@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Vue 3 Course </title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+
 </head>
 <body>
     hello world...
@@ -36,12 +48,23 @@
             <!-- v-if="!showBooksDetails" = v-else -->
         </button>
 
-        <br />
+        <br>
 
-        <div v-if=""> showing... </div>
+        <div v-show=showBooksDetails> showing... </div>
+        <!-- v-show=var === v-if=var -->
 
         <div @click="showName"> click to show name in console </div>
         <div @click="changeTitle('sage velgard')"> change title </div>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <div class="box" @mouseover="handleEvent"> mouse over </div>
+        <div class="box" @mouseleave="handleEvent"> mouse leave </div>
+        <div class="box" @dblclick="handleEvent"> double click </div>
+        <div class="box" @mousemove="handleEvent"> mouse move </div>
+        <div class="box" @mousemove="handleMouseMove">{{x}},{{y}}</div>
     </div>
 
     {{title}}
