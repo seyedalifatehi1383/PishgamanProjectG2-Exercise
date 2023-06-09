@@ -16,9 +16,14 @@ const app2 = Vue.createApp({
             x:0,
             y:0,
             showBooksDetails: true,
-            title: "boofe koor",
-            author: 'sadegh hedayat',
-            age: 45
+            title_1: "boofe koor",
+            author_1: 'sadegh hedayat',
+            age_1: 45,
+            books: [
+                {title: "boofe koor", author: 'sadegh hedayat'},
+                {title: "sage velgard", author: 'sadegh hedayat'},
+                {title: "pedare pooldar pedare bi pool", author: 'robert kyusaki'},
+            ]
         }
     },
 

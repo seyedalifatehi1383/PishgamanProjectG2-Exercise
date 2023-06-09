@@ -30,7 +30,16 @@
         <!-- برای اینکه بتونیم از مقدار یک متغیر داخل یک استرینگ استفاده کنیم میتونیم از  {{}} استفاده کنیم و مقدار متغیر رو داخلش بنویسیم -->
         <!-- اگه از {{}} خارج از المنت مورد نظر که در اینجا تگ دیو هست استفاده کنیم دیگه اون مقدارو نمیگیره -->
         <div v-if=showBooksDetails>
-            <p> {{title}} - {{author}} - {{age}} </p>
+            <p> {{title_1}} - {{author_1}} - {{age_1}} </p>
+            <p> {{books[0].title}} - {{books[0].author}} </p>
+            <p> {{books[1].title}} - {{books[1].author}} </p>
+
+            <ul v-for="book in books">
+                <li>
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+                </li>
+            </ul>
         </div>
 
         <button v-on:click="age++"> Increase </button>
