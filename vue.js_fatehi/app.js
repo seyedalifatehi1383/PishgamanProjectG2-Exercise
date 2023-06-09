@@ -13,6 +13,7 @@ const app2 = Vue.createApp({
     // ما میتونیم یک تابع رو به عنوان ویژگی در نطر بگیریم که مقدار اون یک فانکشن هست که خودش ابجکت برمیگردونه
     data() {
         return {
+            showBooksDetails: true,
             title: "boofe koor",
             author: 'sadegh hedayat',
             age: 45
@@ -27,6 +28,11 @@ const app2 = Vue.createApp({
         changeTitle(title) {
             this.title = title;
             console.log('clicked');
+        },
+
+        hideBooksDetails() {
+            // this.showBooksDetails = false; // just false it
+            this.showBooksDetails = !this.showBooksDetails;
         },
     }
 });
