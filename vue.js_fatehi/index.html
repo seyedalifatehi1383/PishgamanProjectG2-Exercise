@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Vue 3 Course </title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    hello world...
+
+    <div id="app1">
+        <h2> this is test text 2 </h2>
+    </div>
+
+    <div id="app2">
+        <!-- برای اینکه بتونیم از مقدار یک متغیر داخل یک استرینگ استفاده کنیم میتونیم از  {{}} استفاده کنیم و مقدار متغیر رو داخلش بنویسیم -->
+        <!-- اگه از {{}} خارج از المنت مورد نظر که در اینجا تگ دیو هست استفاده کنیم دیگه اون مقدارو نمیگیره -->
+        <p> {{title}} - {{author}} - {{age}} </p>
+        
+        <button v-on:click="age++"> Increase </button>
+        <button v-on:click="age--"> Decrease </button>
+    
+        <div @click="showName"> click to show name in console </div>
+        <div @click="changeTitle('sage velgard')"> change title </div>
+    </div>
+
+    {{title}}
+    
+    <script src="app.js"></script>
+</body>
+</html>
