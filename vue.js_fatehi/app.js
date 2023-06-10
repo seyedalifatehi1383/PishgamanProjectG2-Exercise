@@ -13,6 +13,7 @@ const app2 = Vue.createApp({
     // ما میتونیم یک تابع رو به عنوان ویژگی در نطر بگیریم که مقدار اون یک فانکشن هست که خودش ابجکت برمیگردونه
     data() {
         return {
+            url: "https://www.google.com",
             x:0,
             y:0,
             showBooksDetails: true,
@@ -49,7 +50,7 @@ const app2 = Vue.createApp({
         handleMouseMove(e) {
             this.x = e.offsetX;
             this.y = e.offsetY;
-        }
+        },
     }
 });
 

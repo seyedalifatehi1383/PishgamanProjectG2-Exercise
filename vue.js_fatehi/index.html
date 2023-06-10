@@ -27,6 +27,10 @@
     </div>
 
     <div id="app2">
+        <!-- they are same -->
+        <a v-bind:href="url"> google </a>
+        <a :href="url"> google </a>
+
         <!-- برای اینکه بتونیم از مقدار یک متغیر داخل یک استرینگ استفاده کنیم میتونیم از  {{}} استفاده کنیم و مقدار متغیر رو داخلش بنویسیم -->
         <!-- اگه از {{}} خارج از المنت مورد نظر که در اینجا تگ دیو هست استفاده کنیم دیگه اون مقدارو نمیگیره -->
         <div v-if=showBooksDetails>
@@ -42,8 +46,8 @@
             </ul>
         </div>
 
-        <button v-on:click="age++"> Increase </button>
-        <button v-on:click="age--"> Decrease </button>
+        <button v-on:click="age_1++"> Increase </button>
+        <button v-on:click="age_1--"> Decrease </button>
     
         <br /><br />
 
