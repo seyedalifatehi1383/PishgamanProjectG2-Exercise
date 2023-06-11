@@ -21,9 +21,9 @@ const app2 = Vue.createApp({
             author_1: 'sadegh hedayat',
             age_1: 45,
             books: [
-                {title: "boofe koor", author: 'sadegh hedayat'},
-                {title: "sage velgard", author: 'sadegh hedayat'},
-                {title: "pedare pooldar pedare bi pool", author: 'robert kyusaki'},
+                {title: "boofe koor", author: 'sadegh hedayat', image: 'images/1.jpeg'},
+                {title: "sage velgard", author: 'sadegh hedayat', image: 'images/2.jpeg'},
+                {title: "pedare pooldar pedare bi pool", author: 'robert kyusaki', image: 'images/3.jpeg'},
             ]
         }
     },

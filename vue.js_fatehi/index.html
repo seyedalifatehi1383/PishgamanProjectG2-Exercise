@@ -8,6 +8,12 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
 
     <style>
+        body {
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+        
         .box {
             padding: 100px 0;
             width: 400px;
@@ -15,6 +21,22 @@
             background: #ddd;
             margin: 20px;
             display: inline-block;
+        }
+
+        .f1 {
+            margin: 0;
+            padding: 0;
+        }        
+ 
+        li.f {
+            list-style-type: none;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     </style>
 
@@ -38,10 +60,11 @@
             <p> {{books[0].title}} - {{books[0].author}} </p>
             <p> {{books[1].title}} - {{books[1].author}} </p>
 
-            <ul v-for="book in books">
-                <li>
-                    <h3>{{book.title}}</h3>
-                    <p>{{book.author}}</p>
+            <ul v-for="book in books" class="f1">
+                <li class="f">
+                    <img :src="book.image" :alt="book.title">
+                    <p calss="f1"> {{book.author}} </p>
+                    <h3 calss="f1"> {{book.title}} </h3>
                 </li>
             </ul>
         </div>
