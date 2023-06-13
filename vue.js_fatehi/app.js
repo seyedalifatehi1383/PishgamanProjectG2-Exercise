@@ -21,7 +21,7 @@ const app2 = Vue.createApp({
             author_1: 'sadegh hedayat',
             age_1: 45,
             books: [
-                {title: "boofe koor", author: 'sadegh hedayat', image: 'images/1.jpeg', isFav: false},
+                {title: "boofe koor", author: 'sadegh hedayat', image: 'images/1.jpeg', isFav: true},
                 {title: "sage velgard", author: 'sadegh hedayat', image: 'images/2.jpeg', isFav: true},
                 {title: "pedare pooldar pedare bi pool", author: 'robert kyusaki', image: 'images/3.jpeg', isFav: true},
             ]
@@ -58,7 +58,10 @@ const app2 = Vue.createApp({
     },
 
     computed: {
-        
+        filteredBooks() {
+            // کار این متد اینه که میاد و اون کتاب هایی که مقدار ایزفیو ترو دارن رو برمیگردونه (همه کتابها رو نه)
+            return this.books.filter(book => book.isFav)
+        }
     },
 });
 

@@ -23,7 +23,7 @@
             display: inline-block;
         }
 
-        p, h3 {
+        p, h3, ul {
             margin: 0;
             padding: 0;
         }        
@@ -65,7 +65,9 @@
             <p> {{books[0].title}} - {{books[0].author}} </p>
             <p> {{books[1].title}} - {{books[1].author}} </p>
 
-            <ul v-for="book in books" class="f1">
+            <!-- <ul v-for="book in books"> -->
+            <!-- shows all of the books ^ -->
+            <ul v-for="book in filteredBooks">
                 <li @click="changeFav(book)" :class="{fav: book.isFav}">
                     <img :src="book.image" :alt="book.title">
                     <p> {{book.author}} </p>
