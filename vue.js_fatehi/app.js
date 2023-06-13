@@ -21,9 +21,9 @@ const app2 = Vue.createApp({
             author_1: 'sadegh hedayat',
             age_1: 45,
             books: [
-                {title: "boofe koor", author: 'sadegh hedayat', image: 'images/1.jpeg'},
-                {title: "sage velgard", author: 'sadegh hedayat', image: 'images/2.jpeg'},
-                {title: "pedare pooldar pedare bi pool", author: 'robert kyusaki', image: 'images/3.jpeg'},
+                {title: "boofe koor", author: 'sadegh hedayat', image: 'images/1.jpeg', isFav: false},
+                {title: "sage velgard", author: 'sadegh hedayat', image: 'images/2.jpeg', isFav: true},
+                {title: "pedare pooldar pedare bi pool", author: 'robert kyusaki', image: 'images/3.jpeg', isFav: true},
             ]
         }
     },
@@ -51,7 +51,15 @@ const app2 = Vue.createApp({
             this.x = e.offsetX;
             this.y = e.offsetY;
         },
-    }
+
+        changeFav(book) {
+            book.isFav = !book.isFav;
+        },
+    },
+
+    computed: {
+        
+    },
 });
 
 // <<>> بعد قرارش دادم روی این المنت

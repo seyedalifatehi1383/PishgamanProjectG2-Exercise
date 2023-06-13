@@ -23,12 +23,12 @@
             display: inline-block;
         }
 
-        .f1 {
+        p, h3 {
             margin: 0;
             padding: 0;
         }        
  
-        li.f {
+        li {
             list-style-type: none;
             background: #fff;
             margin: 20px auto;
@@ -37,6 +37,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        li.fav {
+            background: #2ae36b;
+            color: white;
         }
     </style>
 
@@ -61,10 +66,10 @@
             <p> {{books[1].title}} - {{books[1].author}} </p>
 
             <ul v-for="book in books" class="f1">
-                <li class="f">
+                <li @click="changeFav(book)" :class="{fav: book.isFav}">
                     <img :src="book.image" :alt="book.title">
-                    <p calss="f1"> {{book.author}} </p>
-                    <h3 calss="f1"> {{book.title}} </h3>
+                    <p> {{book.author}} </p>
+                    <h3> {{book.title}} </h3>
                 </li>
             </ul>
         </div>
