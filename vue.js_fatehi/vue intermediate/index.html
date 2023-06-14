@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Vue 3 Course </title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+    <style>
+        body {
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+        
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        p, h3, ul {
+            margin: 0;
+            padding: 0;
+        }        
+ 
+        li {
+            list-style-type: none;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li.fav {
+            background: #2ae36b;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    hello world...
+
+    <div id="app1">
+        <h2> this is test text 2 </h2>
+    </div>
+
+    <div id="app2">
+        <!-- they are same -->
+        <a v-bind:href="url"> google </a>
+        <a :href="url"> google </a>
+
+        <!-- برای اینکه بتونیم از مقدار یک متغیر داخل یک استرینگ استفاده کنیم میتونیم از  {{}} استفاده کنیم و مقدار متغیر رو داخلش بنویسیم -->
+        <!-- اگه از {{}} خارج از المنت مورد نظر که در اینجا تگ دیو هست استفاده کنیم دیگه اون مقدارو نمیگیره -->
+        <div v-if=showBooksDetails>
+            <p> {{title_1}} - {{author_1}} - {{age_1}} </p>
+            <p> {{books[0].title}} - {{books[0].author}} </p>
+            <p> {{books[1].title}} - {{books[1].author}} </p>
+
+            <!-- <ul v-for="book in books"> -->
+            <!-- shows all of the books ^ -->
+            <ul v-for="book in filteredBooks">
+                <li @click="changeFav(book)" :class="{fav: book.isFav}">
+                    <img :src="book.image" :alt="book.title">
+                    <p> {{book.author}} </p>
+                    <h3> {{book.title}} </h3>
+                </li>
+            </ul>
+        </div>
+
+        <button v-on:click="age_1++"> Increase </button>
+        <button v-on:click="age_1--"> Decrease </button>
+    
+        <br /><br />
+
+        <button @click="hideBooksDetails">
+            <span v-if="showBooksDetails"> hide books details </span>
+            <span v-else> show books details </span>
+            
+            <!-- بدین منظور اینجا از دو اسپن استفاده شده که دو پیام مختلفو برای کاربقر روی دکمه نمایش بده -->
+
+            <!-- در تگ اسپن بالا: -->
+            <!-- v-if="!showBooksDetails" = v-else -->
+        </button>
+
+        <br>
+
+        <div v-show=showBooksDetails> showing... </div>
+        <!-- v-show=var === v-if=var -->
+
+        <div @click="showName"> click to show name in console </div>
+        <div @click="changeTitle('sage velgard')"> change title </div>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <div class="box" @mouseover="handleEvent"> mouse over </div>
+        <div class="box" @mouseleave="handleEvent"> mouse leave </div>
+        <div class="box" @dblclick="handleEvent"> double click </div>
+        <div class="box" @mousemove="handleEvent"> mouse move </div>
+        <div class="box" @mousemove="handleMouseMove">{{x}},{{y}}</div>
+    </div>
+
+    {{title}}
+    
+    <script src="app.js"></script>
+</body>
+</html>
