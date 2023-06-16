@@ -1,14 +1,16 @@
 <template>
-  <h1> this is a simple text for testing the app </h1>
+  <h1> {{ title }} </h1>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return{
+      title: 'this is a simple text'
+    }
   }
 }
 </script>
@@ -21,5 +23,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+/* this is global for all components */
+h1{
+  background: #2c3e50 fixed;
+  color: aliceblue;
 }
 </style>
