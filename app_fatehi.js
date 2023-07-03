@@ -73,3 +73,37 @@ console.log(person['name']);
 let selection = 'name';
 person[selection] = 'Fatehi';
 console.log(person[selection]);
+
+// Arithmetic Operators
+
+// operands:
+x = 2;
+y = 3;
+
+// edition operator
+// console.log(x + y);
+// subtraction op.
+// console.log(x - y);
+// multipulication op.
+// console.log(x * y);
+// divition op.
+// console.log(x / y);
+// remainder op.
+// console.log(x % y);
+// exponentiation op.
+// that means: x to the power of y!!!
+// console.log(x ** y);
+
+x = 10;
+// Increment Operators (++)
+console.log(x); // 10
+console.log(++x); // 11
+console.log(x++); // 11
+console.log(x); // 12
+
+// Decrement Operators (--)
+console.log(x); // 12
+console.log(--x); // 11
+console.log(x--); // 11
+console.log(x); // 10
+
