@@ -107,3 +107,9 @@ console.log(--x); // 11
 console.log(x--); // 11
 console.log(x); // 10
 
+// Assignment operator (=)
+x = 10;
+
+x += 5; // x = x + 5
+x *= 3; // x = x * 3
+
