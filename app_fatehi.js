@@ -125,3 +125,12 @@ console.log(x <= 10); // true
 // Equality op.
 console.log(x === 1); // is equal
 console.log(x !== 1); // is not equal
+
+// Equality Operators
+// Strict Equality (Type + Value)
+console.log(1 === 1); // true
+console.log('1' === 1); // false
+
+// Lose Equality (Value)
+console.log(1 == 1); // true
+console.log('1' == 1); // true (right one changes to string)
