@@ -39,10 +39,11 @@
 </head>
 <body>
     <div id="app">
+        <p>{{filteredbooks}}</p>
         <a v-bind:href="url">google</a>
         <!-- :href -->
         <div v-if="show"><p>{{title}}-{{author}}-{{age}} </p>
-            <ul v-for="book in books" >
+            <ul v-for="book in filteredbooks" >
                 <li  :class="{fav:book.isfav }" @click:"cang(book)">
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
