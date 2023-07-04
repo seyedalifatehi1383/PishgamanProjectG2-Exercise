@@ -41,7 +41,14 @@ const  app =Vue.createApp({
               
              }
 
+        },
+        computed:{
+          filteredbooks(){
+            return this.books.filter(book =>book.isfav)
+          }
         }
+
+
     
 })
 app.mount("#app")
