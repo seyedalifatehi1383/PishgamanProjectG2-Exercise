@@ -1,5 +1,9 @@
 <template>
-  <h1> {{ title }} </h1>
+  <div>
+    <h1> {{ title }} </h1>
+    <input type="text" ref="name">
+    <button @click="handleEvent"> click </button>
+  </div>
 </template>
 
 <script>
@@ -10,6 +14,14 @@ export default {
   data(){
     return{
       title: 'this is a simple text'
+    }
+  },
+
+  methods: {
+    handleEvent() {
+      console.log("event");
+      console.log(this.$refs.name);
+      this.$refs.name.classList.add('ali')
     }
   }
 }
