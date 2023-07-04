@@ -113,3 +113,15 @@ x = 10;
 x += 5; // x = x + 5
 x *= 3; // x = x * 3
 
+x = 10;
+// Comparison Operators (> < <= >=)
+
+// Relational op.
+console.log(x > 10); // true
+console.log(x >= 10); // true
+console.log(x < 10); // false
+console.log(x <= 10); // true
+
+// Equality op.
+console.log(x === 1); // is equal
+console.log(x !== 1); // is not equal
