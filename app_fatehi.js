@@ -134,3 +134,9 @@ console.log('1' === 1); // false
 // Lose Equality (Value)
 console.log(1 == 1); // true
 console.log('1' == 1); // true (right one changes to string)
+
+// Ternary (Conditional) operator
+let points = 101;
+let type = points > 100 ? 'gold' : 'silver';
+
+console.log(type);
