@@ -1,9 +1,14 @@
 <template>
   <div>
     <h1> {{ title }} </h1>
+    <p> welcome... </p>
     <input type="text" ref="name">
-    <button @click="handleEvent"> click </button>
-    <Modal />
+    <!-- <button @click="handleEvent"> click </button> -->
+    {{ showModal }}
+    <div v-if="showModal">
+      <Modal :header="header" :text="text" theme="sale" @close="changeModal"/>      
+    </div>
+    <button @click="changeModal"> Show Modal </button>
   </div>
 </template>
 
@@ -15,16 +20,23 @@ export default {
   components: {Modal},
   data(){
     return{
-      title: 'this is a simple text'
+      title: 'this is a simple text',
+      header: 'Sign up for a Giveaway',
+      text: "Grab the course for half price",
+      showModal: false,
     }
   },
 
   methods: {
-    handleEvent() {
-      console.log("event");
-      console.log(this.$refs.name);
-      this.$refs.name.classList.add('ali')
-    }
+    // handleEvent() {
+    //   console.log("event");
+    //   console.log(this.$refs.name);
+    //   this.$refs.name.classList.add('ali')
+    // }
+
+    changeModal() {
+      this.showModal = !this.showModal
+    },
   }
 }
 </script>
