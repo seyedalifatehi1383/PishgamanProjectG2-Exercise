@@ -4,7 +4,7 @@
     <p> welcome... </p>
     <input type="text" ref="name">
     <!-- <button @click="handleEvent"> click </button> -->
-    <div v-if="showModal">
+    <teleport to=".modals" v-if="showModal">
       <!-- <Modal :header="header" :text="text" theme="sale" @close="changeModal"/>       -->
       <Modal theme="" @close="changeModal">  
         <h1> OpenCode Giveaway </h1>
@@ -14,16 +14,15 @@
           <a href="#"> more info </a>
         </template>
       </Modal>    
-    </div>
-
-    <div v-if="showModalTwo">
-      <!-- <Modal :header="header" :text="text" theme="sale" @close="changeModal"/>       -->
-      <Modal theme="" @close="changeModalTwo">  
+    </teleport>
+    
+    <teleport to=".modals" v-if="showModalTwo">
+    <!-- <Modal :header="header" :text="text" theme="sale" @close="changeModal"/>       -->
+    <Modal theme="" @close="changeModalTwo">  
         <h1> Sign up for news </h1>
         <p> don't lose any news </p>
-        
       </Modal>    
-    </div>
+    </teleport>
 
     <button @click.shift="changeModal"> Show Modal (hold shift) </button>
     <button @click="changeModalTwo"> Show Modal </button>
@@ -66,7 +65,7 @@ export default {
 </script>
 
 <style>
-#app {
+#app, .modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
