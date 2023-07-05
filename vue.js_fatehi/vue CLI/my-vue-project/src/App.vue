@@ -4,12 +4,31 @@
     <p> welcome... </p>
     <input type="text" ref="name">
     <!-- <button @click="handleEvent"> click </button> -->
-    {{ showModal }}
     <div v-if="showModal">
-      <Modal :header="header" :text="text" theme="sale" @close="changeModal"/>      
+      <!-- <Modal :header="header" :text="text" theme="sale" @close="changeModal"/>       -->
+      <Modal theme="" @close="changeModal">  
+        <h1> OpenCode Giveaway </h1>
+        <p> Grab the course for half price </p>
+        <template v-slot:links>
+          <a href="#"> Sign up </a> 
+          <a href="#"> more info </a>
+        </template>
+      </Modal>    
     </div>
-    <button @click="changeModal"> Show Modal </button>
-  </div>
+
+    <div v-if="showModalTwo">
+      <!-- <Modal :header="header" :text="text" theme="sale" @close="changeModal"/>       -->
+      <Modal theme="" @close="changeModalTwo">  
+        <h1> Sign up for news </h1>
+        <p> don't lose any news </p>
+        
+      </Modal>    
+    </div>
+
+    <button @click.shift="changeModal"> Show Modal (hold shift) </button>
+    <button @click="changeModalTwo"> Show Modal </button>
+
+</div>
 </template>
 
 <script>
@@ -21,9 +40,10 @@ export default {
   data(){
     return{
       title: 'this is a simple text',
-      header: 'Sign up for a Giveaway',
-      text: "Grab the course for half price",
+      // header: 'Sign up for a Giveaway',
+      // text: "Grab the course for half price",
       showModal: false,
+      showModalTwo: false,
     }
   },
 
@@ -36,6 +56,10 @@ export default {
 
     changeModal() {
       this.showModal = !this.showModal
+    },
+
+    changeModalTwo() {
+      this.showModalTwo = !this.showModalTwo
     },
   }
 }
