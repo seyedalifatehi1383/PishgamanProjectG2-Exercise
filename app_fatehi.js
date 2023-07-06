@@ -140,3 +140,23 @@ let points = 101;
 let type = points > 100 ? 'gold' : 'silver';
 
 console.log(type);
+
+// Logical operators
+
+// AND (&&)
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
+
+console.log(eligibleForLoan) // true
+
+// OR (||) 
+highIncome = false;
+goodCreditScore = true;
+eligibleForLoan = highIncome || goodCreditScore;
+
+console.log(eligibleForLoan) // true
+
+// NOT (!)
+let applicationRefused = !eligibleForLoan;
+console.log(eligibleForLoan) // false
