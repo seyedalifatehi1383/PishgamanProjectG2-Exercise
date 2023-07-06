@@ -160,3 +160,17 @@ console.log(eligibleForLoan) // true
 // NOT (!)
 let applicationRefused = !eligibleForLoan;
 console.log(eligibleForLoan) // false
+
+// Logical Ops. with NON BOOLEANS
+
+console.log(false || "ali") // ali
+console.log(false || 1) // 1
+
+// Short-circuiting (2 is ignored)
+console.log(false || 1 || 2) // 1
+
+let userColor = undefined;
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor;
+
+console.log(currentColor);
