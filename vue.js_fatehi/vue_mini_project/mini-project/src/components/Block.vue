@@ -40,7 +40,8 @@ export default {
         },
         stopTimer() {
             clearInterval(this.timer);
-            console.log(this.recationTimer);
+            // console.log(this.recationTimer);
+            this.$emit('end', this.recationTimer);
         },
     },
 }
