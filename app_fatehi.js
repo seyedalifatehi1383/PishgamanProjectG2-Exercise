@@ -184,7 +184,7 @@ console.log(currentColor); //blue
 console.log(1 | 2); // 3
 console.log(1 & 2); // 0
 
-// Access control system
+// Access control system (i.e.)
 
 // Read, Write, Execute
 // 00000100
@@ -202,3 +202,10 @@ let message = (myPermission & readPermission) ? 'yes' : 'no';
 
 console.log(message); // yes
 
+// Operator Precedence
+
+x = 2 + 3 * 4;
+console.log(x) // 14
+
+x = (2 + 3) * 4;
+console.log(x) // 20
