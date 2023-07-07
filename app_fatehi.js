@@ -293,4 +293,23 @@ do {
 // executes one time
 // while loop doesnt execute
 
+// infinite loops
+
+// i = 0
+// while (i < 5) {
+//     console.log(i)
+//     // i++
+// }
+
+// while (true) {
+    
+// }
+
+// i = 0
+// do {
+//    // i++
+// } while (i < 5)
+
+// for (let i = 0; i < 10;)
+
 // for...in
