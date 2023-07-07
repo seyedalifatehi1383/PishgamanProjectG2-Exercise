@@ -548,12 +548,12 @@ function isPrime(number) {
 
 // OBJECTS
 
-let radius = 1;
-x = 1
-y = 1
+// let radius = 1;
+// x = 1
+// y = 1
 
-function draw() {}
-function move() {}
+// function draw() {}
+// function move() {}
 
 const circle = {
     radius: 1,
@@ -570,4 +570,31 @@ const circle = {
 
 circle.draw(); // method
 
-// 
+// factory functions
+// camelCase
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console.log('draw')
+        }
+    }
+}
+
+const circle1 = creatwCircle(1)
+console.log(circle1)
+
+const circle2 = creatwCircle(2)
+console.log(circle2)
+
+// constructor function
+// PascalCase
+
+function Circle(radius) {
+    this.radius = radius;
+    this.draw() = function() {
+        console.log('draw');
+    }
+}
+
+const circle3 = new Circle(1);
