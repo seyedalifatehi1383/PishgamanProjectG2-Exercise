@@ -312,4 +312,24 @@ do {
 
 // for (let i = 0; i < 10;)
 
-// for...in
+// iterating over the properties of an object
+// 1- for...in
+const person = {
+    name: 'Mosh',
+    age: 30
+}
+
+for (const key in person) {
+    console.log(key, person[key])
+    console.log(key, key.person)
+    // name
+    // age
+}
+
+// dot notation
+person.name
+
+// bracket notation
+person['name']
+
+// for...of
