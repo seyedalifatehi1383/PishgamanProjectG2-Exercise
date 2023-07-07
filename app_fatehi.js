@@ -374,8 +374,8 @@ function isLandscape(width, height) {
     // return (width > height) ? true : false;
     return (width > height);
 }
-// fizzBuzz function
 
+// fizzBuzz function
 // divisible by 3 => Fizz
 // divisible by 5 => Buzz
 // divisible by both => FizzBuzz
@@ -392,3 +392,24 @@ function fizzBuzz(input) {
     else if (input % 5 === 0) console.log('Buzz')
     else console.log(input)
 }
+
+// demerit points
+// speed limit = 70
+// 5 -> 1 point
+// 12points = suspended
+
+checkSpeed(75) // test
+
+function checkSpeed(speed) {
+    if (speed <= 74) {
+        console.log(Ok)
+        return ;
+    }
+
+    else {
+        let points = Math.floor((speed - 70) / 5);
+        if (points >= 1 && points <= 11) console.log('Points: ', points)
+        else console.log('License suspended')
+    }
+}
+
