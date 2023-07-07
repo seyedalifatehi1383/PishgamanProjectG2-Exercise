@@ -312,8 +312,8 @@ do {
 
 // for (let i = 0; i < 10;)
 
+// for...in
 // iterating over the properties of an object
-// 1- for...in
 const person = {
     name: 'Mosh',
     age: 30
@@ -332,4 +332,12 @@ person.name
 // bracket notation
 person['name']
 
+for (let index in colors) {
+    console.log(index, colors[index])
+}
+
 // for...of
+// iterating arrays
+for (const color of colors) {
+    console.log(color);
+}
