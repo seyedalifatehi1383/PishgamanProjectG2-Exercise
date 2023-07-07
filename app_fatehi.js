@@ -513,3 +513,16 @@ function calculateAverage(array) {
 
     return sum / array.length;
 }
+
+// stars
+showStars(10) // test
+
+function showStars(rows) {
+    for (let i = 1; i <= rows; i++) {
+        let pattern = '';
+        for (let j = 0; j < i; j++) {
+            pattern += '*'
+        }
+        console.log(pattern)
+    }
+}
