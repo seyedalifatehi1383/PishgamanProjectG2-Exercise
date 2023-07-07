@@ -314,11 +314,8 @@ do {
 
 // for...in
 // iterating over the properties of an object
-const person = {
-    name: 'Mosh',
-    age: 30
-}
 
+// note: object person is previosly declared in line 55
 for (const key in person) {
     console.log(key, person[key])
     console.log(key, key.person)
@@ -331,6 +328,8 @@ person.name
 
 // bracket notation
 person['name']
+
+let colors = ['red', 'green', 'blue']
 
 for (let index in colors) {
     console.log(index, colors[index])
@@ -370,9 +369,26 @@ let num = maxOfTwoNumbers(1, 2);
 console.log(num)
 
 // is landscape exercise
-console.log(isLandscape(300, 600)) // true
+console.log(isLandscape(300, 600)) // false
 function isLandscape(width, height) {
     // return (width > height) ? true : false;
     return (width > height);
 }
+// fizzBuzz function
 
+// divisible by 3 => Fizz
+// divisible by 5 => Buzz
+// divisible by both => FizzBuzz
+// not divisible by neither 3 nor 5 => shows the number
+// not a number => 'Not a Number'
+
+console.log(fizzBuzz('test')) // test
+console.log(typeof NaN) // "number" but declared as "bot a valid number"
+
+function fizzBuzz(input) {
+    if (typeof input !== 'number') console.log('Not a Number')
+    else if (input % 3 === 0 && input % 5 === 0) console.log('FizzBuzz')
+    else if (input % 3 === 0) console.log('Fizz')
+    else if (input % 5 === 0) console.log('Buzz')
+    else console.log(input)
+}
