@@ -355,7 +355,7 @@ while (i <= 10) {
     i++;
 }
 
-// max of two numbers
+// max of two numbers exercise
 function maxOfTwoNumbers(a1, b1) {
     // if (a1 > b1) return a1;
     // else return b1
@@ -368,3 +368,11 @@ function maxOfTwoNumbers(a1, b1) {
 
 let num = maxOfTwoNumbers(1, 2);
 console.log(num)
+
+// is landscape exercise
+console.log(isLandscape(300, 600)) // true
+function isLandscape(width, height) {
+    // return (width > height) ? true : false;
+    return (width > height);
+}
+
