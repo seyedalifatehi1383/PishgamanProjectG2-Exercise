@@ -173,4 +173,32 @@ let userColor = undefined;
 let defaultColor = 'blue';
 let currentColor = userColor || defaultColor;
 
-console.log(currentColor);
+console.log(currentColor); //blue
+
+// Bitwise Operators
+// 1 = 00000001
+// 2 = 00000010
+// R = 00000011 = | = 3
+// R = 00000000 = & = 0
+
+console.log(1 | 2); // 3
+console.log(1 & 2); // 0
+
+// Access control system
+
+// Read, Write, Execute
+// 00000100
+// 00000010
+// 00000001
+
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
+
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;
+
+let message = (myPermission & readPermission) ? 'yes' : 'no';
+
+console.log(message); // yes
+
