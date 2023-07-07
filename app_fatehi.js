@@ -225,3 +225,23 @@ a = c
 
 console.log(a)
 console.log(b)
+
+// Conditional Statements
+
+// 1- if...else
+
+// Hour
+// hour between 6am and 12pm : good morning!
+// hour between 12pm and 6pm : good afternoon!
+// otherwise : good evening!
+
+let hour = 10;
+if (hour >= 6 && hour < 12) 
+    console.log('good morning')
+else if (hour >= 12 && hour < 18)
+    console.log('good afternoon')
+else
+    console.log('good evening')
+
+
+// 2- switch...case
