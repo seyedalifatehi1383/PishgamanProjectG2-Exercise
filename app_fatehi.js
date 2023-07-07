@@ -341,3 +341,16 @@ for (let index in colors) {
 for (const color of colors) {
     console.log(color);
 }
+
+// break and continue
+i = 0;
+while (i <= 10) {
+    if (i === 5) break;
+    if (i % 2 === 0) {
+        i++;
+        continue;
+    }
+
+    console.log(i);
+    i++;
+}
