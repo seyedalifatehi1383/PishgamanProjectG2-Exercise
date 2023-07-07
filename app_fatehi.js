@@ -413,7 +413,27 @@ function checkSpeed(speed) {
     }
 }
 
+// ODD or EVEN
+showNumbers(10) // test
+
+function showNumbers(limit) {
+    for (let i = 0; i <= limit; i++) {
+        // if (i % 2 === 0) {
+        //     console.log(i, " \"EVEN\"")
+        //     continue;
+        // }
+        
+        // console.log(i, " \"ODD\"")
+    
+        const message = (i % 2 === 0 ? 'EVEN' : 'ODD')
+        console.log(i, message)
+    }
+}
+
 // count truthy 
+array = ['red', 1, 0, 3]
+console.log(countTruthy(array)) // 3 (test)
+
 function countTruthy(array) {
     let count = 0;
     
@@ -427,6 +447,6 @@ function countTruthy(array) {
         if (value)
             count++;
     }
-    
+
     return count;
 }
