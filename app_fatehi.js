@@ -209,3 +209,19 @@ console.log(x) // 14
 
 x = (2 + 3) * 4;
 console.log(x) // 20
+
+// Swapping vars
+
+let a = 'red';
+let b = 'blue';
+
+console.log(a)
+console.log(b)
+
+let c = b;
+
+b = a
+a = c
+
+console.log(a)
+console.log(b)
