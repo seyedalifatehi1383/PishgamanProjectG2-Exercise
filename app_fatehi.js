@@ -450,3 +450,22 @@ function countTruthy(array) {
 
     return count;
 }
+
+// string properties
+const movie = {
+    title: 'a',
+    releaseYear: 2018,
+    rating: 4.5,
+    director: 'b'
+}
+showProperties(movie) // test
+
+function showProperties(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'string')
+            console.log(key, obj[key])
+    }
+}
+
+// sum of the multiples 3 and 5
+function
