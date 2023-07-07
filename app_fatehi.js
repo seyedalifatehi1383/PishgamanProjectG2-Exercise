@@ -545,3 +545,29 @@ function isPrime(number) {
 
     return true
 }
+
+// OBJECTS
+
+let radius = 1;
+x = 1
+y = 1
+
+function draw() {}
+function move() {}
+
+const circle = {
+    radius: 1,
+    location: {
+        x: 1,
+        y: 1
+    },
+    isVisible: true,
+    // declaring function in object 
+    draw: function() {
+        console.log('draw')
+    }
+};
+
+circle.draw(); // method
+
+// 
