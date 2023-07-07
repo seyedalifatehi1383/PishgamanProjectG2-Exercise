@@ -263,3 +263,12 @@ switch (role) {
 if (role === 'guest') console.log('Guest User')
 else if (role === 'moderator') console.log('Moderator User')
 else console.log('Unknown User')
+
+// Loops
+// for
+
+for (let i = 1; i <= 5; i++) {
+    if (i % 2 !== 0) console.log(i)
+}
+
+// while
