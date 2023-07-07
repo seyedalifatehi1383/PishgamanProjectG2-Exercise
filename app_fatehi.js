@@ -354,3 +354,17 @@ while (i <= 10) {
     console.log(i);
     i++;
 }
+
+// max of two numbers
+function maxOfTwoNumbers(a1, b1) {
+    // if (a1 > b1) return a1;
+    // else return b1
+
+    // if (a1 > b1) return a1;
+    // return b1
+
+    return (a1 > b1) ? a1 : b1;
+}
+
+let num = maxOfTwoNumbers(1, 2);
+console.log(num)
