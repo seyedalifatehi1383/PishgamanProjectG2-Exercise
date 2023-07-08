@@ -5,8 +5,31 @@
     <router-link :to="{name : 'Jobs'}">Jobs</router-link> |
     <a href="/about">about</a>
   </nav>
+
+  <button @click="backward"> Go Back </button>
+  <button @click="redirect"> Redirect </button>
+  <button @click="forward"> Go Forward </button>
+
   <router-view/>
 </template>
+
+<script>
+export default {
+  methods: {
+    backward() {
+      this.$router.go(-1) // یکی برو عقب (در حالت کلی : به اندازه تعداد منفی ها برو عقب)
+    },
+
+    redirect() {
+      this.$router.push({name: 'Home'})
+    },
+
+    forward() {
+      this.$router.go(1) // یکی برو جلو (در حالت کلی : به اندازه تعداد مثبت ها برو جلو)
+    }
+  }
+}
+</script>
 
 <style>
 #app {
@@ -32,5 +55,13 @@ nav a {
 nav a.router-link-exact-active {
   color: white;
   background: crimson;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 </style>
