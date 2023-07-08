@@ -73,37 +73,36 @@ export default {
             if(e.key === ',' && this.tempSkill) {
                 if(!this.skills.includes(this.tempSkill)) {
                     this.skills.push(this.tempSkill)
-                    
                 }
                 this.tempSkill = ''
-            },
-            // console.log(e);
-
-            deleteSkill(skill) {
-                this.skills = this.skills.filter((item) => {
-                    return skill !== item
-                })
-            },
-
-            handleSubmit() {
-                // if(this.password.length > 5) {
-                    // this.passwordError = ''
-                // } else {
-                    // this.passwordError = 'password is not more than 5 chars'
-                // }
-
-                this.passwordError = (this.password.length > 5) ? '' : 'password is not more than 5 chars'
-
-
-                if(!this.passwordError) {
-                    console.log('email', this.email)
-                    console.log('password', this.password)
-                    console.log('role', this.role)
-                    console.log('skills', this.skills)
-                    console.log('terms accepted', this.terms)
-                }
-                // console.log('form submitted')
             }
+        },
+        // console.log(e);
+
+        deleteSkill(skill) {
+            this.skills = this.skills.filter((item) => {
+                return skill !== item
+            })
+        },
+
+        handleSubmit() {
+            // if(this.password.length > 5) {
+                // this.passwordError = ''
+            // } else {
+                // this.passwordError = 'password is not more than 5 chars'
+            // }
+
+            this.passwordError = (this.password.length > 5) ? '' : 'password is not more than 5 chars'
+
+
+            if(!this.passwordError) {
+                console.log('email', this.email)
+                console.log('password', this.password)
+                console.log('role', this.role)
+                console.log('skills', this.skills)
+                console.log('terms accepted', this.terms)
+            }
+            // console.log('form submitted')
         }
     }
 }
