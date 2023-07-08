@@ -11,12 +11,21 @@
 export default {
     data() {
         return {
-            jobs: [
-                {title: 'OpenCode UX Designer', id: 1, details: 'lorem'},
-                {title: 'OpenCode Web Developer', id: 2, details: 'lorem'},
-                {title: 'OpenCode Vue Developer', id: 3, details: 'lorem'}
-            ]
+            // jobs: [
+                // {title: 'OpenCode UX Designer', id: 1, details: 'lorem'},
+                // {title: 'OpenCode Web Developer', id: 2, details: 'lorem'},
+                // {title: 'OpenCode Vue Developer', id: 3, details: 'lorem'}
+            // ]
+
+            jobs: []
         }
+    },
+
+    mounted() {
+        fetch('http://localhost:3000/jobs')
+            .then(res => res.json())
+            .then(data => this.jobs = data)
+            .catch(err => console.log(err.message))
     }
 }
 </script>
