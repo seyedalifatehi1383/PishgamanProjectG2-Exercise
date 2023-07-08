@@ -1,10 +1,11 @@
 <template>
-    <form>
+    <form @submit.pervent="handleSubmit">
         <label> Email </label>
         <input type="email" required v-model="email">
 
         <label> Password </label>
         <input type="password" required v-model="password">
+        <div v-if="passwordError" class="error"> {{ passwordError }} </div>
 
         <label> Role: </label>
         <select v-model="role">
@@ -62,6 +63,7 @@ export default {
             terms: false,
             tempSkill: '',
             skills: [],
+            passwordError: '',
             // names: [],
         }
     },
@@ -81,6 +83,26 @@ export default {
                 this.skills = this.skills.filter((item) => {
                     return skill !== item
                 })
+            },
+
+            handleSubmit() {
+                // if(this.password.length > 5) {
+                    // this.passwordError = ''
+                // } else {
+                    // this.passwordError = 'password is not more than 5 chars'
+                // }
+
+                this.passwordError = (this.password.length > 5) ? '' : 'password is not more than 5 chars'
+
+
+                if(!this.passwordError) {
+                    console.log('email', this.email)
+                    console.log('password', this.password)
+                    console.log('role', this.role)
+                    console.log('skills', this.skills)
+                    console.log('terms accepted', this.terms)
+                }
+                // console.log('form submitted')
             }
         }
     }
