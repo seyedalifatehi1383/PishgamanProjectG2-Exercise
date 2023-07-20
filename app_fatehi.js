@@ -59,7 +59,7 @@ let person = {
 
 console.log(person);
 
-// changing and reading  the properties:
+// changing and reading the properties:
 // Dot Notation
 person.name = 'Ali';
 console.log(person.name);
@@ -315,7 +315,7 @@ do {
 // for...in
 // iterating over the properties of an object
 
-// note: object person is previosly declared in line 55
+// note: object person is previously declared in line 55
 for (const key in person) {
     console.log(key, person[key])
     console.log(key, key.person)
@@ -581,10 +581,10 @@ function createCircle(radius) {
     }
 }
 
-const circle1 = creatwCircle(1)
+const circle1 = createCircle(1)
 console.log(circle1)
 
-const circle2 = creatwCircle(2)
+const circle2 = createCircle(2)
 console.log(circle2)
 
 // constructor function
@@ -592,9 +592,31 @@ console.log(circle2)
 
 function Circle(radius) {
     this.radius = radius;
-    this.draw() = function() {
+    this.draw = function() {
         console.log('draw');
     }
+
+    // return this;
 }
 
 const circle3 = new Circle(1);
+
+// Dynamic Nature of Objects
+// we can add params to the obj after declaring it
+
+const circle10 = {
+    radius: 1
+};
+
+circle10.color = 'yellow';
+circle10.draw = function() {}
+
+console.log(circle10) // {radius: 1, color: "yellow", draw: f}
+
+delete circle10.color;
+delete circle10.draw;
+// constant var means that we cannot reassign the vars of the obj
+// circle10 = {} -> wrong
+
+console.log(circle10) // {radius: 1}
+
