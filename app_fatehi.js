@@ -620,3 +620,20 @@ delete circle10.draw;
 
 console.log(circle10) // {radius: 1}
 
+// constructor property
+console.log(circle3.constructor)
+// f Circle(radius) {
+// this.radius = radius;
+// this.draw = function() {
+//     console.log('draw')
+//  }
+// }
+
+console.log(circle1.constructor)
+// f Object() { [native code] }
+
+// let x = {} equals to let x = new Object
+
+new String(); // '', "", ``
+new Boolean(); // true, false
+new Number(); // 1, 2, 3, ...
