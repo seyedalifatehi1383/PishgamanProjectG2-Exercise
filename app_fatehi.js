@@ -637,3 +637,25 @@ console.log(circle1.constructor)
 new String(); // '', "", ``
 new Boolean(); // true, false
 new Number(); // 1, 2, 3, ...
+
+// functions are ocjects
+function Circle1(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw')
+    }
+}
+
+const another = new Circle1(1)
+
+const Circle2 = new Function('radius', `
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw')
+    }
+`);
+
+const circle11 = new Circle2(1)
+
+Circle1.call({}, 1)
+Circle1.apply({}, [1])
