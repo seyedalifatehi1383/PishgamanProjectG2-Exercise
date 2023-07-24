@@ -659,3 +659,43 @@ const circle11 = new Circle2(1)
 
 Circle1.call({}, 1)
 Circle1.apply({}, [1])
+
+// value vs refrence types
+// they are independent
+x = 10
+y = x
+
+x = 20
+console.log(x) // 20
+console.log(y) // 10
+
+// they are dependent
+let objx = { value: 10 }
+let objy = objx 
+
+objx.value = 20
+
+console.log(objx) // { value: 20 }
+console.log(objy) // { value: 20 }
+
+// the number var and the arg of the func are independent ad in the different scope
+number = 10 
+
+function increase(number) {
+    number++
+}
+
+increase(number)
+console.log(number) // 10
+
+// the objs are dependent
+
+let obj = { value: 10 }
+
+function increaseObj(obj) {
+    obj.value++
+}
+
+increaseObj(obj)
+console.log(obj) // 11
+
