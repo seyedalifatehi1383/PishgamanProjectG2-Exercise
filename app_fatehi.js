@@ -699,3 +699,26 @@ function increaseObj(obj) {
 increaseObj(obj)
 console.log(obj) // 11
 
+// enumerating props of an obj
+const circle12 = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+}
+
+for (let key in circle12) 
+    console.log(key, circle12[key])
+
+// for (let key of circle12)
+//     console.log(key)
+// error: object is not iterable
+
+for (let key of Object.keys(circle12))
+    console.log(key)
+    
+for (let entry of Object.entries(circle12))
+    console.log(entry)
+
+if ('radius' in circle12) console.log('yes')    
+
