@@ -722,3 +722,135 @@ for (let entry of Object.entries(circle12))
 
 if ('radius' in circle12) console.log('yes')    
 
+// const anotherCircle12 = {};
+
+// for (let key in circle12) {
+//     anotherCircle12[key] = circle12[key]
+// }
+
+// anotherCircle12['radius'] = circle12['radius']
+
+// const another1Circle12 = Object.assign({}, circle12)
+
+const another1Circle12 = { ...circle12 }
+
+console.log(another1Circle12)
+
+const another2Circle12 = Object.assign({
+    color: 'yellow'
+}, circle12)
+
+console.log(another2Circle12)
+
+// garbsge collector
+
+const c1 = {}
+console.log(c1)
+
+// the memory automatically deleted
+
+// math
+console.log(Math.PI)
+
+// string
+
+// string primitive
+let message1 = 'hi'
+
+// string object
+const another1 = new String('hi')
+
+console.log(typeof message1) // string
+console.log(typeof another1) // object
+
+// template literals
+message1 = 'this is my \n' + 
+'\'first\' text';
+
+message1 = 
+`this is my
+'first' text`
+
+const name11 = 'ali'
+message1 = 
+`this is my
+'first' text
+
+${name11}
+${2 + 3}`
+
+// date
+const now = new Date()
+const date1 = new Date('May 11 2018 09:00')
+const date2 = new Date(2018, 4, 11, 9)
+
+// exercises
+// address object
+
+const address = {
+    street: 'a',
+    city: 'b',
+    zipCode: 'c'
+}
+
+function showAddress(address) {
+    for (let key in address) {
+        console.log(key, address[key])
+    }
+}
+
+showAddress(address)
+
+// factory function
+function createAddress(street, city, zipCode) {
+    return {
+        // street: street
+        street,
+        city,
+        zipCode
+    }
+}
+
+let address1 = createAddress('a', 'b', 'c')
+console.log(address1)
+
+// constructor function
+function Address(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+}    
+
+let address2 = new Address('a', 'b', 'c')
+console.log(address2)
+
+function areEqual(address1, address2) {
+    return address1.street === address2.street
+    && address1.city === address2.city
+    && address1.zipCode === address2.zipCode
+}
+
+function areSame(address1, address2) {
+    return address1 === address2
+}
+
+// blog post obj
+const blogPost = {
+    title: 'a',
+    body: 'b',
+    author: 'c',
+    views: 1,
+    comments: [
+        {
+            body: 'd',
+            author: 'e'
+        },
+
+        {
+            body: 'f',
+            author: 'g'
+        }
+    ],
+    isLive: true
+}
+
