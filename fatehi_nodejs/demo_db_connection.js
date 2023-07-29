@@ -15,8 +15,16 @@ con.connect(function(err) {
   //   console.log('result: ' + result)
   // });
 
-  con.query("SELECT * FROM Test WHERE 1" , (err , result) =>{
+  con.query("INSERT INTO Test(fName, lName) VALUES ('aghaj', 'bagheryj')" , (err , result) =>{
+    if (err) throw err;
+    console.log("Connected!");
+    
     console.log(result);
-    console.log(result[0].lName + ' ' + result[0].fName)
+    // console.log(result[0].lName + ' ' + result[0].fName) -> "wrong"
   })
+  
+  // con.query("SELECT * FROM Test WHERE 1" , (err , result) =>{
+  //   console.log(result);
+  //   console.log(result[0].lName + ' ' + result[0].fName)
+  // })
 });
