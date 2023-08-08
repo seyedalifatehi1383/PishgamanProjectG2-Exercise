@@ -1,0 +1,28 @@
+{
+  "ids": {
+    "Todo": 6,
+    "TodoList": 4,
+    "User": 2,
+    "UserCredentials": 2
+  },
+  "models": {
+    "Todo": {
+      "1": "{\"title\":\"Take over the galaxy\",\"desc\":\"MWAHAHAHAHAHAHAHAHAHAHAHAHAMWAHAHAHAHAHAHAHAHAHAHAHAHA\",\"id\":1}",
+      "2": "{\"title\":\"destroy alderaan\",\"desc\":\"Make sure there are no survivors left!\",\"id\":2}",
+      "3": "{\"title\":\"play space invaders\",\"desc\":\"Become the very best!\",\"id\":3}",
+      "4": "{\"title\":\"crush rebel scum\",\"desc\":\"Every.Last.One.\",\"id\":4}",
+      "5": "{\"title\":\"get eggs\",\"isComplete\":false,\"todoListId\":3,\"id\":5}"
+    },
+    "TodoList": {
+      "1": "{\"title\":\"Sith lord's check list\",\"color\":\"blue\",\"id\":1}",
+      "2": "{\"title\":\"My daily chores\",\"color\":\"red\",\"id\":2}",
+      "3": "{\"title\":\"grocery list\",\"id\":3}"
+    },
+    "User": {
+      "616079bb-a769-4573-9634-e9c1053db6f3": "{\"id\":\"616079bb-a769-4573-9634-e9c1053db6f3\",\"email\":\"testuser2@abc.com\"}"
+    },
+    "UserCredentials": {
+      "dddff2bb-b470-4cff-9cd7-5c53377b2af2": "{\"id\":\"dddff2bb-b470-4cff-9cd7-5c53377b2af2\",\"password\":\"$2a$10$xqJoA5rBVdKEawhblP8dHOFmN7walxdzPXszJiEMCoEfYlNqGDVD6\",\"userId\":\"616079bb-a769-4573-9634-e9c1053db6f3\"}"
+    }
+  }
+}

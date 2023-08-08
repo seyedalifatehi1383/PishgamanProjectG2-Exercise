@@ -10,3 +10,10 @@ var message = LoggerAndReturn('hello, world');
 var message2 = LoggerAndReturn(2);
 console.log(message);
 console.log(message2);
+function getArray(items) {
+    return new Array().concat(items);
+}
+var myNumArr = getArray([100, 200, 300]);
+var myStrArr = getArray(['hello', 'world']);
+console.log(myNumArr);
+console.log(myStrArr);
